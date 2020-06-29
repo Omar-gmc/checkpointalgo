@@ -1,0 +1,48 @@
+ALGORITHM checkpoint_algo
+VAR
+    str : STRING;
+    count ,lng ,nbr_vow,i : INTEGER;
+    
+BEGIN
+    count:=1;
+    lng := str.length;
+    nbr_vow:=0;
+    FOR i FROM 0 TO lng-1 STEP 1  DO
+        IF (str[i]=" ") THEN
+            count := count+1;
+        END_IF
+        
+        SWITCH (str[i]) DO
+        case "a" : nbr_vow:=nb_vow + 1;
+        break;
+        case "e" : nbr_vow:=nb_vow + 1;
+        break;
+        case "i" : nbr_vow:=nb_vow + 1;
+        break;
+        case "u" : nbr_vow:=nb_vow + 1;
+        break;
+        case "o" : nbr_vow:=nb_vow + 1;
+        break;
+        case "y" : nbr_vow:=nb_vow + 1;
+        break;
+        case "A" : nbr_vow:=nb_vow + 1;
+        break;
+        case "E" : nbr_vow:=nb_vow + 1;
+        break;
+        case "I" : nbr_vow:=nb_vow + 1;
+        break;
+        case "U" : nbr_vow:=nb_vow + 1;
+        break;
+        case "O" : nbr_vow:=nb_vow + 1;
+        break;
+        case "Y" : nbr_vow:=nb_vow + 1;
+        break;
+        default : 
+        END_SWITCH
+    
+    END_FOR
+    Write("The length of the sentence is" lng);
+    Write("The number of words in the sentence is " count);
+    Write("The number of vowels in the sentence is" nbr_vow);
+END
+
